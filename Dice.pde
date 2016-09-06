@@ -1,14 +1,16 @@
 void setup()
 {
+	size(400,400);
 	noLoop();
 }
 void draw()
 {
-	//your code here
+	
 }
 void mousePressed()
 {
 	redraw();
+
 }
 class Die //models one single dice cube
 {
@@ -23,6 +25,6 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		//your code here
+		rect(30,30,50,50,7);
 	}
 }
