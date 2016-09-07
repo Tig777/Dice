@@ -5,7 +5,11 @@ void setup()
 }
 void draw()
 {
-	
+	for(int x =50; x <350; x= x +51)
+	{
+		Die bob = new Die(x,200);
+		bob.show();
+	}
 }
 void mousePressed()
 {
@@ -14,17 +18,22 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
+	int myX, myY;
 	Die(int x, int y) //constructor
 	{
-		//variable initializations here
+		myY = y;
+		myX = x;
+		//int myX =(int)(Math.random()*200);
+		//int myY = (int)(Math.random()*200);
 	}
 	void roll()
 	{
-		//your code here
+
 	}
 	void show()
 	{
-		rect(30,30,50,50,7);
+	noStroke();
+	fill(21, 255, 0);
+	rect(myX,myY,50,50,7);
 	}
 }
