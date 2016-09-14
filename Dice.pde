@@ -1,18 +1,24 @@
 void setup()
 {
-	size(375,375);
-	background (255,0,255);
+	size(375,425);
+	background (0);
 	noLoop();
 }
 void draw()
 {
+	int sum =0;
 	for(int x =10; x <370; x= x +61)
 	{
-	for (int y = 10; y <370; y=y+61) {
+	for (int y = 10; y <370; y=y+61) 
+		{
 			
-		Die bob = new Die(x,y, 1);
+		Die bob = new Die(x,y);
+		//bob.roll();
 		bob.show();
-			}
+
+				sum = sum + bob.answer;
+				System.out.println(sum);
+		}
 	}
 }
 void mousePressed()
@@ -22,19 +28,20 @@ void mousePressed()
 
 class Die //models one single dice cube
 {
+	
 	int myX, myY, answer;
-	Die(int x, int y, int w) //constructor
+	Die(int x, int y) //constructor
 	{
 		myY = y;
 		myX = x;
-		answer = w;
+		roll();
 
 		//int myX =(int)(Math.random()*200);
 		//int myY = (int)(Math.random()*200);
 	}
 	void roll()
 	{
-		int value = (int)(Math.random()*6-1);
+		answer = (int)(Math.random()*6+1);
 	}
 	void show()
 	{
@@ -42,45 +49,52 @@ class Die //models one single dice cube
 	fill(255);
 	rect(myX,myY,50,50,7);
 	if(answer == 1){
-			fill(255,0,255);
-			ellipse(myX+20,myY+30,10,10);
+			fill(0);
+			ellipse(myX+25,myY+25,10,10);
+			
 		}
 		else if(answer == 2){
-			fill(255,0,255);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
+			fill(0);
+			ellipse(myX+15,myY+15,10,10);
+			ellipse(myX+35,myY+35,10,10);
+			
 		}
 		else if(answer == 3){
-			fill(255,0,255);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
+			fill(0);
+			ellipse(myX+12,myY+12,10,10);
+			ellipse(myX+25,myY+25,10,10);
+			ellipse(myX+38,myY+38,10,10);
+			
 		}
 		else if(answer == 4){
-			fill(255,0,255);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
+			fill(0);
+			ellipse(myX+15,myY+15,10,10);
+			ellipse(myX+15,myY+35,10,10);
+			ellipse(myX+35,myY+15,10,10);
+			ellipse(myX+35,myY+35,10,10);
+			
 		}
 		else if(answer == 5){
-			fill(255,0,255);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
+			fill(0);
+			ellipse(myX+12,myY+12,10,10);
+			ellipse(myX+12,myY+38,10,10);
+			ellipse(myX+25,myY+25,10,10);
+			ellipse(myX+38,myY+12,10,10);
+			ellipse(myX+38,myY+38,10,10);
+			
 
 		}
 		else if(answer == 6){
-			fill(255,0,255);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
-			ellipse(myX+20,myY+30,10,10);
+			fill(0);
+			ellipse(myX+12,myY+12,10,10);
+			ellipse(myX+12,myY+25,10,10);
+			ellipse(myX+12,myY+38,10,10);
+			ellipse(myX+38,myY+12,10,10);
+			ellipse(myX+38,myY+25,10,10);
+			ellipse(myX+38,myY+38,10,10);
+			
 		}
 	}
+
 }
+
