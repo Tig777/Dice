@@ -1,11 +1,12 @@
 void setup()
 {
 	size(375,425);
-	background (0);
+	
 	noLoop();
 }
 void draw()
 {
+	background (111);
 	int sum =0;
 	for(int x =10; x <370; x= x +61)
 	{
@@ -18,8 +19,11 @@ void draw()
 
 				sum = sum + bob.answer;
 				
-		}
+		}	
 	}
+	fill(20,0,255);
+	textSize(15);
+	text("Your lucky number is: " + sum , 90, 410);
 }
 void mousePressed()
 {
