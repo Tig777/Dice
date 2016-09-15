@@ -17,7 +17,7 @@ void draw()
 		bob.show();
 
 				sum = sum + bob.answer;
-				System.out.println(sum);
+				
 		}
 	}
 }
