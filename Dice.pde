@@ -21,7 +21,7 @@ void draw()
 				
 		}	
 	}
-	fill(20,0,255);
+	fill(int(random (253)),int(random(253)), int(random(253)));
 	textSize(15);
 	text("Your lucky number is: " + sum , 90, 410);
 }
@@ -51,27 +51,28 @@ class Die //models one single dice cube
 	{
 	noStroke();
 	fill(255);
+	
 	rect(myX,myY,50,50,7);
 	if(answer == 1){
-			fill(0);
+			fill(int(random (253)),int(random(253)), int(random(253)));
 			ellipse(myX+25,myY+25,10,10);
 			
 		}
 		else if(answer == 2){
-			fill(0);
+			fill(int(random (253)),int(random(253)), int(random(253)));
 			ellipse(myX+15,myY+15,10,10);
 			ellipse(myX+35,myY+35,10,10);
 			
 		}
 		else if(answer == 3){
-			fill(0);
+			fill(int(random (253)),int(random(253)), int(random(253)));
 			ellipse(myX+12,myY+12,10,10);
 			ellipse(myX+25,myY+25,10,10);
 			ellipse(myX+38,myY+38,10,10);
 			
 		}
 		else if(answer == 4){
-			fill(0);
+			fill(int(random (253)),int(random(253)), int(random(253)));
 			ellipse(myX+15,myY+15,10,10);
 			ellipse(myX+15,myY+35,10,10);
 			ellipse(myX+35,myY+15,10,10);
@@ -79,7 +80,7 @@ class Die //models one single dice cube
 			
 		}
 		else if(answer == 5){
-			fill(0);
+			fill(int(random (253)),int(random(253)), int(random(253)));
 			ellipse(myX+12,myY+12,10,10);
 			ellipse(myX+12,myY+38,10,10);
 			ellipse(myX+25,myY+25,10,10);
@@ -89,7 +90,7 @@ class Die //models one single dice cube
 
 		}
 		else if(answer == 6){
-			fill(0);
+			fill(int(random (253)),int(random(253)), int(random(253)));
 			ellipse(myX+12,myY+12,10,10);
 			ellipse(myX+12,myY+25,10,10);
 			ellipse(myX+12,myY+38,10,10);
